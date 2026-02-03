@@ -5,7 +5,6 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
-import java.util.TreeSet;
 
 public class MapsLab {
 
@@ -58,7 +57,7 @@ public class MapsLab {
         Map<Integer, Set<String>> wordLengths = new HashMap<>();
         for (String word : words) {
             int length = word.length();
-            wordLengths.put(length, wordLengths.getOrDefault(length, new TreeSet<>()));
+            wordLengths.put(length, wordLengths.getOrDefault(length, new HashSet<>()));
             wordLengths.get(length).add(word);
         }
         return wordLengths;
